@@ -18,6 +18,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Polly
+          command: sudo apt update && sudo apt upgrade && sudo apt install polly-python
+      - run:
           name: Build AAR
           command: ./create-aar.sh
 
